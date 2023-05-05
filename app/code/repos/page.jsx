@@ -2,7 +2,11 @@ import Link from 'next/link'
 import { FaStar, FaCodeBranch, FaEye } from 'react-icons/fa'
 
 const fetchRepos = async () => {
-    const res = await fetch('https://api.github.com/users/nwebpro/repos')
+    const res = await fetch('https://api.github.com/users/nwebpro/repos', {
+        next: {
+            revalidate: 60
+        },
+    })
     await new Promise(resolve => 
         setTimeout(resolve, 1000)
     )
@@ -17,7 +21,7 @@ const Repos = async () => {
             <h2 className='text-2xl mb-5'>Repositories</h2>
             {
                 repos.map(repo => (
-                    <div className='bg-gray-200 mb-5' key={ repo.id }>
+                    <div className='bg-gray-200 mb-5 rounded-md' key={ repo.id }>
                         <Link href={`/code/repos/${ repo.name }`} className='p-5 flex flex-col space-y-3'>
                             <h2>{ repo.name }</h2>
                             <p>{ repo.description }</p>
