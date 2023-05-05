@@ -11,7 +11,7 @@ export const metadata = {
   keywords: 'web development, programming, javascript, react, nextjs',
 }
 
-function RootLayout({ children }) {
+const RootLayout = ({ children }) => {
   return (
     <html lang="en">
       <body className={ inter.className }>

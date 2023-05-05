@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-function Header() {
+const Header = () => {
     return (
         <header className="bg-purple-500 py-3">
             <ul className="flex justify-center items-center gap-5 text-white">
@@ -14,11 +14,11 @@ function Header() {
                     <Link href='/about/team'>Team</Link>
                 </li>
                 <li>
-                    <Link href='/code/repo'>Code</Link>
+                    <Link href='/code/repos'>Code</Link>
                 </li>
             </ul>
         </header>
     );
-}
+};
 
 export default Header;

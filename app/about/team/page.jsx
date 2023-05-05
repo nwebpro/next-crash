@@ -2,12 +2,12 @@ export const metadata = {
     title: "Team",
 }
 
-function Team() {
+const Team = () => {
     return (
         <div>
             Team
         </div>
     );
-}
+};
 
 export default Team;
