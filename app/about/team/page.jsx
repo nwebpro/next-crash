@@ -4,7 +4,7 @@ export const metadata = {
 
 const Team = () => {
     return (
-        <div>
+        <div className='max-w-3xl mx-auto py-5'>
             Team
         </div>
     );

@@ -15,8 +15,8 @@ const Repo = async ({ name }) => {
     const repo = await fetchRepo(name)
     const { description, stargazers_count, forks_count, watchers_count  } = repo
     return (
-        <div>
-            <div className="mb-5">
+        <div className="space-y-3">
+            <div className="mb-3">
                 <Link href={`/code/repos`} className="bg-purple-500 text-white py-2 px-5 rounded">
                     Back to Repo
                 </Link>

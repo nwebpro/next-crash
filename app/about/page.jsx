@@ -4,7 +4,7 @@ export const metadata = {
 
 const About = () => {
     return (
-        <div>
+        <div className='max-w-3xl mx-auto py-5'>
             About
         </div>
     );
